@@ -86,7 +86,7 @@ $(function () {
     
       if(located >= 0)
         calendar.timeSlots.splice(located, 1);
-      //LocalStorage value properties 
+      
     calendar.timeSlots.push(hourEntry);
 
       localStorage.setItem(saved_calendar_key, JSON.stringify(calendar));

@@ -56,7 +56,7 @@ $(function () {
         // Format Time 
         let time = moment(index, ["HH.mm"]).format("h:mmA");
 
-        // Add Rows
+        // Create Rows
         createDayRow(index, time, timeTense, textContent);
     }
 
@@ -73,7 +73,7 @@ $(function () {
       $(".container").append(row);
     }
 
-    // Save Button Click
+    // Save Button 
     $(".saveBtn").on("click", function(event){
       let hourId = $(this).attr("data-hour");
       let textContents = $(`#text-${hourId}`).val();
@@ -86,7 +86,7 @@ $(function () {
     
       if(located >= 0)
         calendar.timeSlots.splice(located, 1);
-      //LocalStorage value properties 
+      
     calendar.timeSlots.push(hourEntry);
 
       localStorage.setItem(saved_calendar_key, JSON.stringify(calendar));
